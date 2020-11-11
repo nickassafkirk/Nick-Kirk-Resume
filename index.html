@@ -6,35 +6,39 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Nick Kirk</title>
 </head>
 <body>
     <header>
-        <div class="row">
+        <div class="row no-gutters">
             <a href="index.html" class="col-md-4 logo"> 
             </a>
             <div class="col-md-8">
-                <div class="row bg-color-name-title">
+                <div class="row no-gutters bg-color-name-title">
                     <div class="col heading">
                         <h1 class="name">Nick Kirk</h1>
                         <h2 class="title">Full Stack Developer</h2>
                     </div>
+                    <div class="col overlay">
+                    <br>
+                    </div>
                 </div>
-                <div class="row">
+                <div class="row no-gutters">
                     <div class="col">
-                        <ul id="nav" class="list-inline">
-                            <li class="col-6 col-sm-3 list-inline-item">
-                                <a href="index.html"><span>Home</span></a>
+                        <ul id="nav" class="list-inline menucontainer">
+                            <li class="col-6 col-sm-3 ui-menu-color-home list-inline-item menuitem">
+                                <a href="index.html" class="hvr-sweep-to-bottom"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a>
                             </li>
-                            <li class="col-6 col-sm-3 list-inline-item">
-                                <a href="resume.html"><span>Resume</span></a>
+                            <li class="col-6 col-sm-3 ui-menu-color-resume list-inline-item menuitem">
+                                <a href="resume.html" class="hvr-sweep-to-bottom"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Resume</span></a>
                             </li>
-                            <li class="col-6 col-sm-3 list-inline-item">
-                                <a href="contact.html"><span>Contact</span></a>
+                            <li class="col-6 col-sm-3 ui-menu-color-contact list-inline-item menuitem">
+                                <a href="contact.html" class="hvr-sweep-to-bottom"><i class="far fa-comment" aria-hidden="true"></i><span>Contact</span></a>
                             </li>
-                            <li class="col-6 col-sm-3 list-inline-item">
-                                <a href="#"><span>Download</span></a>
+                            <li class="col-6 col-sm-3 ui-menu-color-download list-inline-item menuitem">
+                                <a href="#" class="hvr-sweep-to-bottom"><i class="fa fa-download" aria-hidden="true"></i><span>Download</span></a>
                             </li>
                         </ul>
                     </div>
@@ -45,7 +49,18 @@
     </header>
     <section>
     </section>
-    <footer>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">About</h5>
+            </div>
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">Download</h5>
+            </div>
+            <div class="col-sm-4">
+                <h5 class="uppercase general-sub">Social</h5>
+            </div>
+        </div>
     </footer>
     
 </body>
