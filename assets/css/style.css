@@ -14,6 +14,7 @@
     --download: #525252;
     --footer: #525252;
     --gradient: url("../images/gradient.jpg");
+    --chevron: url("../images/chevron.jpg");
 
 }
 /* colors */
@@ -62,7 +63,7 @@
     margin: 0;
 }
 .bg-color-contact{
-    background-color: white;
+    background: var(--chevron);
 }
 
 /* Heading */
@@ -269,7 +270,7 @@ footer{
 }
 
 .bg-color-personal-info{
-    background-color: var(--palegrey);
+    background: var(--chevron);
 }
 
 /* Personal Info */
