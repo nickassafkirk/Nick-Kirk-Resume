@@ -3,8 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
+    --font: #212529;
     --offwhite: #fafafa;
     --lightgrey: #8f8f8f;
+    --palegrey: #f4f4f4;
     --glowgreen: rgb(29, 216, 29);
     --home: #e67e22;
     --resume: #9b59b6;
@@ -229,3 +231,90 @@ footer{
 .social-links li a i:hover{
     background: var(--glowgreen);
 }
+
+/* Three Reasons */
+
+.three-reasons-icon{
+    font-size: 26px;
+    color: var(--home);
+}
+
+.three-reasons-heading{
+    margin-bottom: 15px;
+}
+
+.bg-color-personal-info{
+    background-color: var(--palegrey);
+}
+
+/* Personal Info */
+
+.personal-info-item{
+    margin-bottom: 20px;
+    display: block;
+    clear: both;
+}
+
+.personal-info-item .key,
+.personal-info-item .value{
+    padding-right: 8px;
+    display: inline-block;  
+}
+
+.personal-info-item .key p,
+.personal-info-item .value p{
+    margin: 0;
+}
+
+.personal-info-item .key{
+    width: 30%;
+    margin-right: 21px;
+    padding-top: 2px;
+    vertical-align: top;
+}
+
+.personal-info-item .key p{
+    font-weight: 700;
+}
+
+.personal-info-item .value{
+    position: relative;
+    width: 60%;
+}
+
+.personal-info-item .value p a{
+    text-decoration: none;
+    color: var(--font);
+}
+
+.personal-info-item .value p a:hover{
+    text-decoration: none;
+    color: var(--home);
+    font-weight: 600;
+}
+
+/* Skills */
+ .progress{
+     position: relative;
+     height: 25px; /* changing the height of progress wrapper auto changes height of the bar inside */
+     margin-bottom: 4px;
+ }
+
+ .progress-type{
+     position: absolute; /* absolute child of a relative parent */
+     left: 0px;
+     font-weight: 400;
+     padding: 3px 30px 2px 10px;
+     color: var(--offwhite);
+     background: rgba(25, 25, 25, 0.2);
+
+ }
+
+ .progress-section{
+     margin: 40px 20px;
+ }
+
+
+
+
+
