@@ -9,7 +9,7 @@
     --palegrey: #f4f4f4;
     --glowgreen: rgb(29, 216, 29);
     --home: #e67e22;
-    --resume: #9b59b6;
+    --resume: rgb(155, 89, 182);
     --contact: #3498db;
     --download: #525252;
     --footer: #525252;
@@ -48,10 +48,20 @@
 }
 
 .bg-color-work-history{
-    background-color: var(--resume);
+    background-image: url(../images/chevron.jpg);
+    background-size: cover;
 }
 
-bg-color-contact{
+/*dark overlay for Work history Background*/
+.bg-darken{
+    background-color: rgba(0,0,0,0.65);
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}
+.bg-color-contact{
     background-color: white;
 }
 
@@ -75,12 +85,6 @@ header{
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
 }
-
-/* .overlay{
-    position: absolute;
-    background-color: rgba(0,0,0,0.6);
-    height: 250px;
-} */
 
 .name{
     font-family: 'Exo', sans-serif;
@@ -180,6 +184,15 @@ h1,h2,h3,h4,{
     display: table-cell;
     padding: 0 30px 30px;
     float: none;
+    position: static;
+}
+
+/* Padding removed for workhistory background overlay formatting */
+.section-columnwh{
+    display: table-cell;
+    padding: 0;
+    float: none;
+    position: static;
 }
 
 .history-heading,
@@ -328,20 +341,24 @@ footer{
 
  /* Work History */
 
- .history-heading{
+.history-heading{
    color: var(--offwhite);
    margin-bottom: 50px;
+   padding: 0 30px;
+  
 }
 
 .history-items{
     margin-bottom: 30px;
+    padding: 0 30px
 }
 
 .timeline-item{
     padding: 4em 2em 0em 2em;
     position: relative;
-    color: var(--offwhite);
+    color:  var(--offwhite);
     border-left: 1px solid var(--offwhite);
+    ;
 }
 
 .timeline-item p{
@@ -371,7 +388,7 @@ footer{
     left:-6px;
     border-radius: 12px;
     content: ' ';
-    background: var(--offwhite);
+    background:  var(--offwhite);
 }
 
 /* Contact Form */
@@ -388,7 +405,7 @@ footer{
     margin: 0 auto;
     max-width: 70%;
 }
-
+button[type="button"],
 button[type="submit"]{
     margin-top: 15px;
     margin-bottom: 20px;
@@ -398,10 +415,20 @@ button[type="submit"]{
     background-color: var(--glowgreen);
     border: none;
 }
-
+button[type="button"],
 button[type="submit"]:hover{
     background-color:rgb(17, 182, 17);
 }
+
+button[type="button"]{
+    margin-left: 5%;
+}
+
+button[type="button"] a{
+    text-decoration: none;
+    color: var(--offwhite)
+}
+
 
 /* Media Queries */
 
