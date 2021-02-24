@@ -48,6 +48,14 @@
     background-color: var(--glowgreen);
 }
 
+.ui-menu-color-interests{
+    background-color: #DB614F;
+}
+
+.ui-menu-color-github{
+    background-color: #2F5377;
+}
+
 .bg-color-work-history{
     background-image: url(../images/chevron.jpg);
     background-size: cover;
@@ -98,7 +106,7 @@ header{
 .title{
     font-family: 'roboto', sans-serif;
     font-weight: 200;
-    fint-size: 28px;
+    font-size: 28px;
     margin-top: 20px;
     margin-bottom: 90px;
     color: white;
@@ -161,7 +169,7 @@ header{
 }
 
 /* Special paddings/margins/text */
-h1,h2,h3,h4,{
+h1,h2,h3,h4{
     margin: 0;
 }
 
