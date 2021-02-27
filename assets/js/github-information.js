@@ -15,7 +15,7 @@ function userInformationHTML(user){
     </div>`;
 }
 
-function repoInformationHtml(repos){
+function repoInformationHTML(repos){
     //arguement repos is the value returned from the gitphub api
     // the value is returned as an array
     if (repos.length == 0) {
@@ -40,6 +40,8 @@ function repoInformationHtml(repos){
 
 
 function fetchGitHubInformation(event) {
+    $("#gh-user-data").html("");
+    $("#gh-repo-data").html("");
 
     var username = $("#gh-username").val();
     if (!username) {
@@ -60,7 +62,7 @@ function fetchGitHubInformation(event) {
                 let userData = firstResponse[0];
                 let repoData = secondResponse[0];
                 $("#gh-user-data").html(userInformationHTML(userData));
-                $("#gh-user-data").html(userInformationHTML(repoData));
+                $("#gh-repo-data").html(repoInformationHTML(repoData));
             }, function(errorResponse){
                 if (errorResponse.status === 404) {
                     $("#gh-user-data").html(`<h2>No info found for ${username}</h2>`);
@@ -74,5 +76,7 @@ function fetchGitHubInformation(event) {
             }
         )
 }
+
+$(document).ready(fetchGitHubInformation);
 
  
