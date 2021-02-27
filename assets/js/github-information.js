@@ -15,6 +15,29 @@ function userInformationHTML(user){
     </div>`;
 }
 
+function repoInformationHtml(repos){
+    //arguement repos is the value returned from the gitphub api
+    // the value is returned as an array
+    if (repos.length == 0) {
+        return `<div class="clearfix repo-list">No repos!</div>`;
+    }
+
+    let listItemsHTML = repos.map(function(repo) { //.map function works like a for each loop
+        return `<li>
+            <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+        </li>`
+    });
+    return `<div class="clearfix repo-list">
+      <p>
+        <strong>Repo list:</strong>
+      </p>
+      <ul>
+        ${listItemsHTML.join("\n")} 
+      </ul>
+    </div>`;
+    // .join() method converts and array to a string.
+}
+
 
 function fetchGitHubInformation(event) {
 
@@ -30,11 +53,14 @@ function fetchGitHubInformation(event) {
         </div>`);
 
         $.when(
-            $.getJSON(`https://api.github.com/users/${username}`)
+            $.getJSON(`https://api.github.com/users/${username}`),
+            $.getJSON(`https://api.github.com/users/${username}/repos`)
         ).then(
-            function(response) {
-                let userData = response;
-                4("#gh-user-data").html(userInformationHTML(userData));
+            function(firstResponse, secondResponse) {
+                let userData = firstResponse[0];
+                let repoData = secondResponse[0];
+                $("#gh-user-data").html(userInformationHTML(userData));
+                $("#gh-user-data").html(userInformationHTML(repoData));
             }, function(errorResponse){
                 if (errorResponse.status === 404) {
                     $("#gh-user-data").html(`<h2>No info found for ${username}</h2>`);
